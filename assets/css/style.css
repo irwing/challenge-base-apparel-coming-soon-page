@@ -126,18 +126,25 @@
     color: var(--desaturated-red);
     border: 1px solid var(--desaturated-red);
 }
+.form-group .input-group img.input-icon {
+    margin-left: -75px;
+    margin-right: 5px;
+    width: 30px;
+    display: none;
+}
 .form-group .input-group button {
     margin: 0px 0 0 0;
-    max-width: 100px;
     margin-left: -45px;
+    max-width: 100px;
     border-radius: 10em;
     height: 50px;
     border: none;
-    background-image: var(--degradationTwo);
+    background: var(--degradationTwo);
     flex: 1;
 }
 .form-group .input-group button:hover {
-    background-image: var(--desaturated-red);
+    background: var(--desaturated-red);
+    cursor: pointer;
 }
 .form-group .input-group button img {
     height: 20px;

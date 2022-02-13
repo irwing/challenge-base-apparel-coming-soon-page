@@ -35,6 +35,7 @@
             <div class="form-group">
               <div class="input-group">
                 <input type="email" name="email" id="email" placeholder="Email Address">
+                <img src="./assets/images/icon-error.svg" class="input-icon" alt="Icon error">
                 <button type="submit">
                   <img src="./assets/images/icon-arrow.svg" alt="">
                 </button>
@@ -53,17 +54,22 @@
     const form = document.querySelector('form');
     const submit = document.querySelector('button');
     const errorMessage = document.querySelector('.error');
+    const inputIcon = document.querySelector('.input-icon');
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!validateEmail(email.value)) {
-        console.log('invalid email');
+        submit.style.marginLeft = '0px';
+        inputIcon.style.display = 'block';
         errorMessage.style.display = 'block';
         errorMessage.innerHTML = 'Please provide a valid email';
       } else {
+        submit.style.marginLeft = '-45px';
+        inputIcon.style.display = 'none';
         errorMessage.style.display = 'none';
         errorMessage.innerHTML = '';
-        form.submit();
+        alert("Success!");
+        // form.submit();
       }
     });
   </script>
