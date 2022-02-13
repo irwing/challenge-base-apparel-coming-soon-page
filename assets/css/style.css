@@ -34,11 +34,11 @@
     background-repeat: no-repeat;
 }
 
+/* hero */
 .hero {
     width: 100%;
     max-width: 1440px;
     height: 100vh;
-    max-height: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,7 +48,7 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    padding: 15em 12em 10em 12em;
+    padding: 0 12em 0 12em;
 }
 .hero-content .hero-logo {
     width: 200px;
@@ -87,16 +87,29 @@
     flex-wrap: nowrap;
     margin-top: 2em;
 }
-.hero-content .hero-form form{
+.hero-content .hero-form form {
+    width: 100%;
+}
+.hero-image {
+    width: 40%;
+    height: 100%;
+    background-image: url('../images/hero-desktop.jpg');
+    background-size: cover;
+    background-position: auto 100%;
+    background-repeat: no-repeat;
+}
+
+/* form */
+.form-group .input-group { 
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.hero-content .hero-form input::placeholder {
+.form-group .input-group input::placeholder {
     color: var(--desaturated-red);
 }
-.hero-content .hero-form input {
+.form-group .input-group input {
     margin: 0;
     flex: 1;
     border-radius: 10em;
@@ -113,7 +126,7 @@
     color: var(--desaturated-red);
     border: 1px solid var(--desaturated-red);
 }
-.hero-content .hero-form button {
+.form-group .input-group button {
     margin: 0px 0 0 0;
     max-width: 100px;
     margin-left: -45px;
@@ -123,22 +136,19 @@
     background-image: var(--degradationTwo);
     flex: 1;
 }
-.hero-content .hero-form button:hover {
+.form-group .input-group button:hover {
     background-image: var(--desaturated-red);
 }
-.hero-content .hero-form button img {
+.form-group .input-group button img {
     height: 20px;
     margin-top: 2px;
 }
-
-/* image cover */
-.hero-image {
-    width: 40%;
-    height: 100%;
-    background-image: url('./images/hero-desktop.jpg');
-    background-size: cover;
-    background-position: auto 100%;
-    background-repeat: no-repeat;
+.form-group .error {
+    margin-top: 0.8em;
+    margin-left: 1.3em;
+    display: block;
+    color: var(--soft-red);
+    display: none;
 }
 
 /* media queries desktop */
@@ -183,7 +193,7 @@
         order: 1;
         width: 100%;
         min-height: 350px;
-        background-image: url('./images/hero-mobile.jpg');
+        background-image: url('../images/hero-mobile.jpg');
         background-size: cover;
         background-position: auto 100%;
         background-repeat: no-repeat;
